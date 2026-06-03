@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El SAC — Sistema de Adquisición y Conversión · Jorge Estratega</title>
+  <meta name="description" content="El SAC es un sistema completo de crecimiento para negocios de servicios: diagnóstico, adquisición de clientes y estructura interna. Todo integrado y medido." />
+  <meta property="og:title" content="El SAC — Sistema de Adquisición y Conversión" />
+  <meta property="og:description" content="No piezas sueltas — un sistema completo para crecer de forma predecible y medible." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    .sac-pillar {
+      background: var(--blanco-puro);
+      padding: var(--section-padding);
+    }
+    .sac-pillar:nth-child(even) {
+      background: var(--blanco-roto);
+    }
+    .sac-pillar-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .sac-pillar-inner.reverse {
+      grid-template-columns: 1.4fr 1fr;
+    }
+    .sac-pillar-inner.reverse .sac-pillar-num { order: 2; }
+    .sac-pillar-inner.reverse .sac-pillar-content { order: 1; }
+    .sac-pillar-num-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .sac-pillar-big-num {
+      font-family: var(--font-display);
+      font-size: 200px;
+      color: var(--rojo);
+      opacity: 0.08;
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+    .sac-pillar-content h2 {
+      font-family: var(--font-display);
+      font-size: 44px;
+      color: var(--gris-carbon);
+      margin-bottom: 16px;
+    }
+    .sac-pillar-content p {
+      font-size: 16px;
+      color: var(--gris-medio);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .sac-items {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .sac-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      color: var(--gris-carbon);
+      line-height: 1.5;
+    }
+    .sac-item::before {
+      content: '→';
+      color: var(--rojo);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .sac-vs {
+      background: var(--gris-oscuro);
+      padding: var(--section-padding);
+    }
+    .sac-vs-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .sac-vs h2 {
+      font-family: var(--font-display);
+      font-size: 48px;
+      color: #fff;
+      margin-bottom: 48px;
+    }
+    .vs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .vs-col {
+      background: #222;
+      border-radius: var(--radius-lg);
+      padding: 32px;
+    }
+    .vs-col.highlight {
+      background: rgba(192, 57, 43, 0.08);
+      border: 1px solid rgba(192, 57, 43, 0.3);
+    }
+    .vs-col-title {
+      font-family: var(--font-display);
+      font-size: 24px;
+      margin-bottom: 24px;
+      color: var(--gris-claro);
+    }
+    .vs-col.highlight .vs-col-title { color: var(--rojo); }
+    .vs-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .vs-list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      color: var(--gris-claro);
+      line-height: 1.5;
+    }
+    .vs-list-item .icon { flex-shrink: 0; }
+    @media (max-width: 768px) {
+      .sac-pillar-inner,
+      .sac-pillar-inner.reverse { grid-template-columns: 1fr; gap: 32px; }
+      .sac-pillar-inner.reverse .sac-pillar-num { order: 0; }
+      .sac-pillar-big-num { font-size: 120px; }
+      .vs-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><img src="img/logo-jorge-estratega.png" alt="Jorge Estratega" class="logo-img" /></a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#resultados">Resultados</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="el-sac.html">El SAC</a></li>
+        <li><a href="blog/index.html">Blog</a></li>
+        <li><a href="sesion-de-claridad.html" class="nav-cta">Agendar sesión</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#resultados">Resultados</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="el-sac.html">El SAC</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="sesion-de-claridad.html">Agendar sesión</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="el-sac-hero">
+      <div class="el-sac-hero-inner">
+        <span class="label fade-in">El método</span>
+        <h1 class="fade-in fade-in-delay-1">El SAC: Sistema de Adquisición y Conversión.</h1>
+        <p class="el-sac-hero-sub fade-in fade-in-delay-2">La mayoría de agencias te vende un servicio aislado. El SAC integra diagnóstico, adquisición y estructura interna en un solo sistema diseñado para que tu negocio crezca de forma predecible y medible.</p>
+      </div>
+    </section>
+
+    <!-- PILAR 01 -->
+    <section class="sac-pillar">
+      <div class="sac-pillar-inner">
+        <div class="sac-pillar-num-wrap fade-in">
+          <div class="sac-pillar-big-num">01</div>
+        </div>
+        <div class="sac-pillar-content">
+          <span class="label-dark fade-in">Primer pilar</span>
+          <h2 class="fade-in fade-in-delay-1">Diagnóstico y estrategia</h2>
+          <p class="fade-in fade-in-delay-2">Antes de ejecutar cualquier cosa, entiendo tu negocio desde adentro. El problema que ves raramente es el problema real — la mayoría de los cuellos de botella están escondidos en los procesos, los precios o la estructura del equipo.</p>
+          <div class="sac-items">
+            <div class="sac-item fade-in fade-in-delay-1">Análisis del modelo de negocio: cómo entra y sale el dinero</div>
+            <div class="sac-item fade-in fade-in-delay-2">Identificación del cuello de botella real (no el percibido)</div>
+            <div class="sac-item fade-in fade-in-delay-3">Evaluación de precios, márgenes y rentabilidad por servicio</div>
+            <div class="sac-item fade-in">Mapa de prioridades: qué resolver primero para mayor impacto</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PILAR 02 -->
+    <section class="sac-pillar">
+      <div class="sac-pillar-inner reverse">
+        <div class="sac-pillar-content">
+          <span class="label-dark fade-in">Segundo pilar</span>
+          <h2 class="fade-in fade-in-delay-1">Sistema de adquisición</h2>
+          <p class="fade-in fade-in-delay-2">Publicidad que funciona no es solo hacer anuncios — es tener el sistema completo: el anuncio correcto, la página correcta, el seguimiento correcto y las métricas correctas. Todo conectado.</p>
+          <div class="sac-items">
+            <div class="sac-item fade-in fade-in-delay-1">Campañas en Meta Ads, Google Ads y TikTok Ads</div>
+            <div class="sac-item fade-in fade-in-delay-2">Landing pages optimizadas para conversión real</div>
+            <div class="sac-item fade-in fade-in-delay-3">Automatización de seguimiento de leads</div>
+            <div class="sac-item fade-in">ROAS mensual documentado y verificable</div>
+          </div>
+        </div>
+        <div class="sac-pillar-num-wrap fade-in">
+          <div class="sac-pillar-big-num">02</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PILAR 03 -->
+    <section class="sac-pillar">
+      <div class="sac-pillar-inner">
+        <div class="sac-pillar-num-wrap fade-in">
+          <div class="sac-pillar-big-num">03</div>
+        </div>
+        <div class="sac-pillar-content">
+          <span class="label-dark fade-in">Tercer pilar</span>
+          <h2 class="fade-in fade-in-delay-1">Estructura interna</h2>
+          <p class="fade-in fade-in-delay-2">De nada sirve traer 100 clientes si el negocio solo puede atender 30 bien. La estructura interna garantiza que el crecimiento externo sea sostenible.</p>
+          <div class="sac-items">
+            <div class="sac-item fade-in fade-in-delay-1">Definición de roles y protocolos de atención al cliente</div>
+            <div class="sac-item fade-in fade-in-delay-2">Sistema de métricas financieras clave (ticket promedio, costo por cliente, rentabilidad)</div>
+            <div class="sac-item fade-in fade-in-delay-3">Evaluación de capacidad operativa vs. demanda generada</div>
+            <div class="sac-item fade-in">Estructura de equipo escalable</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VS SECTION -->
+    <section class="sac-vs">
+      <div class="sac-vs-inner">
+        <h2 class="fade-in">Agencia vs. SAC</h2>
+        <div class="vs-grid">
+          <div class="vs-col fade-in fade-in-delay-1">
+            <div class="vs-col-title">Lo que hace una agencia típica</div>
+            <div class="vs-list">
+              <div class="vs-list-item"><span class="icon">✗</span> Ejecuta campañas sin entender el modelo de negocio</div>
+              <div class="vs-list-item"><span class="icon">✗</span> Reportes de métricas de vanidad (alcance, impresiones)</div>
+              <div class="vs-list-item"><span class="icon">✗</span> Sin responsabilidad sobre los resultados reales</div>
+              <div class="vs-list-item"><span class="icon">✗</span> Tú eres uno de 20 o 30 clientes</div>
+              <div class="vs-list-item"><span class="icon">✗</span> No toca procesos internos ni estructura del equipo</div>
+            </div>
+          </div>
+          <div class="vs-col highlight fade-in fade-in-delay-2">
+            <div class="vs-col-title">Lo que hace el SAC</div>
+            <div class="vs-list">
+              <div class="vs-list-item"><span class="icon">✓</span> Diagnóstico profundo antes de gastar un peso en pauta</div>
+              <div class="vs-list-item"><span class="icon">✓</span> Métricas que importan: ROAS, costo por cliente, rentabilidad</div>
+              <div class="vs-list-item"><span class="icon">✓</span> Resultados documentados y verificables</div>
+              <div class="vs-list-item"><span class="icon">✓</span> Máximo 4–5 clientes simultáneos</div>
+              <div class="vs-list-item"><span class="icon">✓</span> Trabaja el negocio completo: afuera y adentro</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-cta-final">
+      <div class="container">
+        <div class="cta-final-inner">
+          <h2 class="fade-in">El SAC empieza con la Sesión de Claridad.</h2>
+          <p class="fade-in fade-in-delay-1">Antes de construir el sistema, necesito entender tu negocio. La Sesión de Claridad es el diagnóstico que define qué piezas del SAC necesitas y en qué orden.</p>
+          <a href="sesion-de-claridad.html" class="btn-primary btn-large fade-in fade-in-delay-2">Agendar mi Sesión de Claridad</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo"><img src="img/logo-jorge-estratega.png" alt="Jorge Estratega" class="footer-logo-img" /></a>
+          <p class="footer-tagline">Consultor de crecimiento para negocios de servicios · Medellín, Colombia</p>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/TUUSUARIO" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+          <a href="https://www.linkedin.com/in/TUUSUARIO" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LI</a>
+          <a href="https://www.tiktok.com/@TUUSUARIO" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TK</a>
+          <a href="https://www.youtube.com/@TUUSUARIO" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Jorge Estratega. Todos los derechos reservados.</p>
+        <div class="footer-nav">
+          <a href="index.html">Inicio</a>
+          <a href="sobre-mi.html">Sobre mí</a>
+          <a href="el-sac.html">El SAC</a>
+          <a href="sesion-de-claridad.html">Sesión de Claridad</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+
